@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace Methods
 {
@@ -14,7 +15,8 @@ namespace Methods
             //Console.WriteLine(result2);
             //Console.WriteLine(number1);
             Console.WriteLine(Multiply(2, 4));
-            Console.WriteLine(Multiply(2, 4,5));
+            Console.WriteLine(Multiply(2, 4, 5));
+            Console.WriteLine(Add4(1, 2, 3, 4, 5, 6));
             Console.ReadLine();
         }
 
@@ -44,6 +46,14 @@ namespace Methods
         {
             return number1 * number2 * number3;
 
+        }
+
+        //params keyword ü kullanımı
+        static int Add4(int number , params int[] numbers)
+        {
+            number = 7;
+            return number + numbers.Sum();
+           
         }
 
         //Challenge param keyword 'de kaldık
