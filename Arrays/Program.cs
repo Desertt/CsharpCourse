@@ -52,6 +52,7 @@ namespace Arrays
                 {
                     Console.WriteLine(regions[i, j]);
                 }
+                Console.WriteLine("********");
             }
             Console.ReadLine();
         }
