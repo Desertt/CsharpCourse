@@ -9,6 +9,17 @@ namespace Loops
             //ForLoop();  // Kodların metod haline getirilmesine Refactoring denir.
             //WhileLoop();
             //DoWhileLoop();
+            //ForEachLoop();
+            if (IsPrimeNumber(7)) //Asal Sayı Kontrolü Değeri Verdik (7) - Metodu Çağırdık-IsPrimeNumber
+            {
+                Console.WriteLine("This is a prime Number!");
+            }
+            else
+            {
+                Console.WriteLine("This is NOT a prime Number!");
+            }
+            Console.ReadLine();
+
 
             #region ForLoops  //For 3 bloktan oluşur - I.Başlangıç-II.Şart- III.Her dönüş bittiğinde Başlangıç Değerini 1 arttır.
             //For 3 bloktan oluşur - I.Başlangıç-II.Şart- III.Her dönüş bittiğinde Başlangıç Değerini 1 arttır.
@@ -67,7 +78,7 @@ namespace Loops
             #endregion
 
             #region Do While Loops  // Do Çalışır Sonra döngü çalışır...
-            int number = 10;
+            /*int number = 10;
             do
             {
                 Console.WriteLine(number);
@@ -75,12 +86,35 @@ namespace Loops
 
             } while (number >= 11);
             Console.ReadLine();
+            */
+            #endregion
+
+            #region Foreach Loops // Dizi temelli dataların dolaşılmasında kullanılır.
+            /*string[] students = new string[3] { "Merve", "Miraç", "Mustafa" };
+            foreach (var student in students)
+            {
+                Console.WriteLine(student);
+            }
+            Console.ReadLine();*/
             #endregion
 
         }
 
         #region Metodlar
-
+              
+        private static bool IsPrimeNumber(int number)
+        {
+            bool result = true;
+            for (int i = 2; i < number-1; i++)
+            {
+                if (number%i==0)
+                {
+                    result = false;
+                    i = number;//bir daha aynnı sayıya girmez  
+                }
+            }
+            return result;
+        }
 
         private static void ForLoop()
         {
@@ -114,6 +148,16 @@ namespace Loops
                 number--;
 
             } while (number >= 11);
+            Console.ReadLine();
+        }
+
+        private static void ForEachLoop()
+        {
+            string[] students = new string[3] { "Merve", "Miraç", "Mustafa" };
+            foreach (var student in students)
+            {
+                Console.WriteLine(student);
+            }
             Console.ReadLine();
         }
 
